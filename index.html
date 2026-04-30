@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aurora Security</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <h2 class="logo"><a href="#inicio">AURORA</a></h2>
+
+    <!-- HAMBURGUESA -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <ul id="menu">
+    <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+    <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="#cyberfocus" data-es="CyberFocus" data-en="CyberFocus">CyberFocus</a></li>
+    <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="#" id="lang-toggle">EN</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header id="inicio" class="hero" data-aos="fade-up">
+  <img src="img/LogoNuevo.png" class="hero-logo">
+
+  <h1>AURORA</h1>
+
+  <h2 
+    data-es="Protección Digital de Última Generación"
+    data-en="Next-Generation Digital Protection">
+    Protección Digital de Última Generación
+  </h2>
+
+  <p 
+    data-es="Soluciones avanzadas de ciberseguridad para proteger tu empresa."
+    data-en="Advanced cybersecurity solutions to protect your company.">
+    Soluciones avanzadas de ciberseguridad para proteger tu empresa.
+  </p>
+
+  <button 
+    class="btn"
+    data-es="Conoce CyberFocus"
+    data-en="Explore CyberFocus"
+    onclick="document.getElementById('cyberfocus').scrollIntoView()">
+    Conoce CyberFocus
+  </button>
+</header>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="nosotros">
+
+  <h2 
+    data-aos="fade-up"
+    data-es="Nosotros"
+    data-en="About Us">
+    Nosotros
+  </h2>
+
+  <div class="nosotros-cards">
+
+    <div class="nos-card" data-aos="fade-up">
+      <i data-lucide="shield"></i>
+
+      <h3 
+        data-es="Nuestro Enfoque"
+        data-en="Our Approach">
+        Nuestro Enfoque
+      </h3>
+
+      <p 
+        data-es="Nos enfocamos en la seguridad y eficiencia de procesos, facilitando la transformación digital."
+        data-en="We focus on security and process efficiency, enabling digital transformation.">
+        Nos enfocamos en la seguridad y eficiencia de procesos, facilitando la transformación digital.
+      </p>
+    </div>
+
+    <div class="nos-card" data-aos="fade-up" data-aos-delay="100">
+      <i data-lucide="eye"></i>
+
+      <h3 
+        data-es="Nuestra Visión"
+        data-en="Our Vision">
+        Nuestra Visión
+      </h3>
+
+      <p 
+        data-es="Priorizamos riesgos para tomar decisiones inteligentes basadas en contexto real."
+        data-en="We prioritize risks to make smart decisions based on real context.">
+        Priorizamos riesgos para tomar decisiones inteligentes basadas en contexto real.
+      </p>
+    </div>
+
+    <div class="nos-card" data-aos="fade-up" data-aos-delay="200">
+      <i data-lucide="briefcase"></i>
+
+      <h3 
+        data-es="Nuestro Portafolio"
+        data-en="Our Portfolio">
+        Nuestro Portafolio
+      </h3>
+
+      <p 
+        data-es="Consultoría, diseño de soluciones y servicios gestionados en ciberseguridad."
+        data-en="Consulting, solution design, and managed cybersecurity services.">
+        Consultoría, diseño de soluciones y servicios gestionados en ciberseguridad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CYBERFOCUS -->
+<section id="cyberfocus" class="features">
+
+  <h2 data-aos="fade-up">CyberFocus</h2>
+
+  <p class="sub" data-aos="fade-up"
+     data-es="Plataforma de Priorización de Amenazas que transforma el caos de vulnerabilidades en un plan de acción claro."
+     data-en="Threat Prioritization Platform that transforms vulnerability chaos into a clear action plan.">
+     Plataforma de Priorización de Amenazas que transforma el caos de vulnerabilidades en un plan de acción claro.
+  </p>
+
+  <div class="features-grid">
+
+    <!-- CARD 1 -->
+    <div class="feature-card">
+      <div class="feature-header">
+        <i data-lucide="clipboard-check"></i>
+        <h3 
+          data-es="Priorización Inteligente"
+          data-en="Smart Prioritization">
+          Priorización Inteligente
+        </h3>
+      </div>
+
+      <p class="feature-desc"
+         data-es="Listados accionables priorizados por riesgo real."
+         data-en="Actionable lists prioritized by real risk.">
+         Listados accionables priorizados por riesgo real.
+      </p>
+
+      <div class="feature-extra">
+        <p
+          data-es="Analizamos miles de vulnerabilidades automáticamente para identificar las más críticas."
+          data-en="We analyze thousands of vulnerabilities automatically to identify the most critical ones.">
+          Analizamos miles de vulnerabilidades automáticamente
+          para identificar las más críticas.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="feature-card">
+      <div class="feature-header">
+        <i data-lucide="shield"></i>
+        <h3
+          data-es="Riesgo Contextualizado"
+          data-en="Contextual Risk">
+          Riesgo Contextualizado
+        </h3>
+      </div>
+
+      <p class="feature-desc"
+         data-es="Evaluación real considerando tu infraestructura."
+         data-en="Real assessment considering your infrastructure.">
+         Evaluación real considerando tu infraestructura.
+      </p>
+
+      <div class="feature-extra">
+        <p
+          data-es="Integramos controles existentes para reducir falsos positivos."
+          data-en="We integrate existing controls to reduce false positives.">
+          Integramos controles existentes para reducir falsos positivos.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="feature-card">
+      <div class="feature-header">
+        <i data-lucide="file-text"></i>
+        <h3
+          data-es="Cumplimiento"
+          data-en="Compliance">
+          Cumplimiento
+        </h3>
+      </div>
+
+      <p class="feature-desc"
+         data-es="Preparado para auditorías."
+         data-en="Ready for audits.">
+         Preparado para auditorías.
+      </p>
+
+      <div class="feature-extra">
+        <p
+          data-es="Generación automática de reportes alineados a estándares."
+          data-en="Automatic report generation aligned with standards.">
+          Generación automática de reportes alineados a estándares.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="feature-card">
+      <div class="feature-header">
+        <i data-lucide="trending-up"></i>
+        <h3
+          data-es="Optimización"
+          data-en="Optimization">
+          Optimización
+        </h3>
+      </div>
+
+      <p class="feature-desc"
+         data-es="Mejora la eficiencia del equipo."
+         data-en="Improve team efficiency.">
+         Mejora la eficiencia del equipo.
+      </p>
+
+      <div class="feature-extra">
+        <p
+          data-es="Automatizamos tareas repetitivas para mayor productividad."
+          data-en="We automate repetitive tasks for greater productivity.">
+          Automatizamos tareas repetitivas para mayor productividad.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+
+  <h2 
+    data-aos="fade-up"
+    data-es="Contacto"
+    data-en="Contact">
+    Contacto
+  </h2>
+
+  <form action="https://formspree.io/f/xlgaqlnw" method="POST" class="form-pro">
+
+    <div class="input-group">
+      <input type="text" required>
+      <label data-es="Nombre" data-en="Name">Nombre</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" required>
+      <label data-es="Email" data-en="Email">Email</label>
+    </div>
+
+    <div class="input-group">
+      <textarea rows="4" required></textarea>
+      <label data-es="Mensaje" data-en="Message">Mensaje</label>
+    </div>
+
+    <button 
+      type="submit"
+      class="btn-form"
+      data-es="Enviar mensaje"
+      data-en="Send message">
+      Enviar mensaje
+    </button>
+
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>AURORA</h2>
+      <p data-es="Líderes en ciberseguridad" data-en="Leaders in cybersecurity">
+        Líderes en ciberseguridad
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h3 data-es="Contacto" data-en="Contact">Contacto</h3>
+      <p>contacto@aurorasys.cl</p>
+      <span data-es="Santiago, Chile" data-en="Santiago, Chile">Santiago, Chile</span>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p 
+      data-es="© 2026 AURORA. Todos los derechos reservados."
+      data-en="© 2026 AURORA. All rights reserved.">
+      © 2026 AURORA. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+  <!-- MENU MOBILE -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+  </script>
+
+  <!-- CARDS CLICK -->
+  <script>
+    document.querySelectorAll(".feature-card").forEach(card => {
+      card.addEventListener("click", () => {
+
+        document.querySelectorAll(".feature-card").forEach(c => {
+          if (c !== card) c.classList.remove("active");
+        });
+
+        card.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <script>
+document.querySelectorAll('#menu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+
+    if (!target) return;
+
+    window.scrollTo({
+      top: target.offsetTop - 90,
+      behavior: 'smooth'
+    });
+
+    // cerrar menú mobile
+    document.getElementById("menu").classList.remove("active");
+  });
+});
+</script>
+
+
+<script>
+let currentLang = "es";
+
+document.getElementById("lang-toggle").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  currentLang = currentLang === "es" ? "en" : "es";
+
+  document.querySelectorAll("[data-es]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + currentLang);
+  });
+
+  document.getElementById("lang-toggle").textContent =
+    currentLang === "es" ? "EN" : "ES";
+});
+</script>
+
+</body>
+</html>
