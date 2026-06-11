@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Aurora Security</title>
+  <title>Aurorasys Security</title>
 
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,7 +21,20 @@
 
   <!-- NAV -->
   <nav class="navbar">
-    <h2 class="logo"><a href="#inicio">AURORA</a></h2>
+
+    <h2 class="logo">
+      <a href="#inicio" class="logo-link">
+
+        <img
+          src="img/LogoNuevo.png"
+          alt="Aurorasys"
+          class="navbar-logo"
+        >
+
+        <span>Aurorasys</span>
+
+      </a>
+    </h2>
 
     <!-- HAMBURGUESA -->
     <div class="menu-toggle" id="menu-toggle">
@@ -33,138 +46,383 @@
   <ul id="menu">
     <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
     <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
-    <li><a href="#cyberfocus" data-es="CyberFocus" data-en="CyberFocus">CyberFocus</a></li>
+    <li><a href="#servicios" data-es="Servicios" data-en="Services">Servicios</a></li>
+    <li><a href="#Australis" data-es="Australis" data-en="Australis">Australis</a></li>
     <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
     <li><a href="#" id="lang-toggle">EN</a></li>
   </ul>
+  
 </nav>
 
 <!-- HERO -->
 <header id="inicio" class="hero" data-aos="fade-up">
-  <img src="img/LogoNuevo.png" class="hero-logo">
 
-  <h1>AURORA</h1>
+  <!-- IZQUIERDA -->
+  <div class="hero-left">
 
-  <h2 
-    data-es="Protección Digital de Última Generación"
-    data-en="Next-Generation Digital Protection">
-    Protección Digital de Última Generación
-  </h2>
+    <img
+      src="img/LogoNuevo.png"
+      class="hero-logo"
+      alt="Aurorasys Logo">
 
-  <p 
-    data-es="Soluciones avanzadas de ciberseguridad para proteger tu empresa."
-    data-en="Advanced cybersecurity solutions to protect your company.">
-    Soluciones avanzadas de ciberseguridad para proteger tu empresa.
-  </p>
+    <h1>AURORASYS</h1>
 
-  <button 
-    class="btn"
-    data-es="Conoce CyberFocus"
-    data-en="Explore CyberFocus"
-    onclick="document.getElementById('cyberfocus').scrollIntoView()">
-    Conoce CyberFocus
-  </button>
+    <h2
+      data-es="Protección Digital de Nueva Generación"
+      data-en="Next-Generation Digital Protection">
+      Protección Digital de Nueva Generación
+    </h2>
+
+    <p
+      data-es="Somos Aurorasys, una empresa especializada en inteligencia de amenazas, gestión de vulnerabilidades y servicios avanzados de ciberseguridad."
+      data-en="We are Aurorasys, a company specialized in threat intelligence, vulnerability management and advanced cybersecurity services.">
+
+      Somos Aurorasys, una empresa especializada en inteligencia de amenazas, gestión de vulnerabilidades y servicios avanzados de ciberseguridad.
+
+    </p>
+
+    <p
+      data-es="Nuestro foco es ayudar a las organizaciones a construir estrategias de defensa claras, concretas y ejecutables."
+      data-en="Our focus is helping organizations build clear, practical and actionable defense strategies.">
+
+      Nuestro foco es ayudar a las organizaciones a construir estrategias de defensa claras, concretas y ejecutables.
+
+    </p>
+
+  </div>
+
+  <!-- DERECHA -->
+  <div class="hero-right">
+
+    <div class="hero-side-card">
+
+      <span
+        class="side-tag"
+        data-es="CIBERSEGURIDAD"
+        data-en="CYBERSECURITY">
+        CIBERSEGURIDAD
+      </span>
+
+      <h3
+        data-es="¿Quiénes Somos?"
+        data-en="Who We Are">
+        ¿Quiénes Somos?
+      </h3>
+
+      <p
+        data-es="Muchas organizaciones invierten en herramientas de seguridad, pero no siempre tienen claridad sobre cuáles vulnerabilidades representan el mayor riesgo para su negocio."
+        data-en="Many organizations invest in security tools, but do not always have a clear understanding of which vulnerabilities represent the greatest risk to their business.">
+
+        Muchas organizaciones invierten en herramientas de seguridad, pero no siempre tienen claridad sobre cuáles vulnerabilidades representan el mayor riesgo para su negocio.
+
+      </p>
+      <br> </br>
+      <p
+        data-es="El resultado suele ser esfuerzo disperso y exposición innecesaria."
+        data-en="The result is often scattered effort and unnecessary exposure.">
+
+        El resultado suele ser esfuerzo disperso y exposición innecesaria.
+
+      </p>
+       <br> </br>
+      <p
+        data-es="En Aurorasys ayudamos a transformar la detección en acción mediante análisis, priorización y estrategias concretas de mitigación."
+        data-en="At Aurorasys, we help transform detection into action through analysis, prioritization and practical mitigation strategies.">
+
+        En Aurorasys ayudamos a transformar la detección en acción mediante análisis, priorización y estrategias concretas de mitigación.
+
+      </p>
+
+    </div> 
+    
+  </div>
+
 </header>
 
+ 
+<div class="btn-center">
+
+  <button
+    class="btn"
+    data-es="Ver más"
+    data-en="Learn More"
+    onclick="document.getElementById('nosotros').scrollIntoView()">
+
+    Ver más
+
+  </button>
+
+</div>
+
+
 <!-- NOSOTROS -->
+
 <section id="nosotros" class="nosotros">
 
-  <h2 
-    data-aos="fade-up"
+  <!-- TAG -->
+  <span
+    class="nosotros-tag"
+    data-es="NOSOTROS"
+    data-en="ABOUT US">
+    ABOUT US
+  </span>
+
+  <h2
     data-es="Nosotros"
     data-en="About Us">
     Nosotros
   </h2>
 
-  <div class="nosotros-cards">
+  <!-- LINEA -->
+  <div class="nosotros-line"></div>
 
-    <div class="nos-card" data-aos="fade-up">
-      <i data-lucide="shield"></i>
+  <!-- CONTENIDO -->
+  <div class="nosotros-content">
 
-      <h3 
-        data-es="Nuestro Enfoque"
-        data-en="Our Approach">
-        Nuestro Enfoque
+    <p
+      data-es="Muchas empresas invierten en herramientas de ciberseguridad, pero no siempre cuentan con claridad sobre cuáles vulnerabilidades representan el mayor riesgo real para su negocio. El resultado suele ser esfuerzo disperso y exposición innecesaria."
+      data-en="Many companies invest in cybersecurity tools, but they do not always have a clear understanding of which vulnerabilities represent the greatest real risk to their business. The result is often scattered effort and unnecessary exposure.">
+      Muchas empresas invierten en herramientas de ciberseguridad, pero no siempre cuentan con claridad sobre cuáles vulnerabilidades representan el mayor riesgo real para su negocio. El resultado suele ser esfuerzo disperso y exposición innecesaria.
+    </p>
+
+    <p
+      data-es="Desde Aurora trabajamos precisamente en eso: ayudar a transformar la detección en acción. Lo hacemos mediante capacidades especializadas que permiten identificar, priorizar y mitigar riesgos de forma efectiva."
+      data-en="At Aurora, we focus precisely on that: helping organizations transform detection into action. We do this through specialized capabilities that enable effective risk identification, prioritization, and mitigation.">
+      Desde Aurora trabajamos precisamente en eso: ayudar a transformar la detección en acción. Lo hacemos mediante capacidades especializadas que permiten identificar, priorizar y mitigar riesgos de forma efectiva.
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- Servicios -->
+<section class="servicios" id="servicios">
+
+  <span
+    class="servicios-tag"
+    data-es="SERVICIOS"
+    data-en="SERVICES">
+    SERVICOS
+  </span>
+
+  <h2
+    data-es="Servicios"
+    data-en="Services">
+    Servicios
+  </h2>
+
+  <div class="servicios-line"></div>
+
+  <p
+    class="servicios-sub"
+    data-es="Servicios ofensivos de ciberseguridad orientados a identificar vulnerabilidades explotables y validar la capacidad de detección y respuesta de su organización. No buscamos únicamente encontrar fallas; buscamos comprender cómo un adversario real podría aprovecharlas."
+    data-en="Offensive cybersecurity services focused on identifying exploitable vulnerabilities and validating your organization's detection and response capabilities. We do not simply look for weaknesses; we seek to understand how a real adversary could exploit them.">
+
+    Servicios ofensivos de ciberseguridad orientados a identificar vulnerabilidades explotables y validar la capacidad de detección y respuesta de su organización. No buscamos únicamente encontrar fallas; buscamos comprender cómo un adversario real podría aprovecharlas.
+
+  </p>
+
+  <div class="servicios-cards">
+
+    <!-- CARD -->
+    <div class="servicio-card">
+
+      <div class="servicio-icon">
+        <i data-lucide="search"></i>
+      </div>
+
+      <h3
+        data-es="Análisis"
+        data-en="Assessment">
+        Análisis
       </h3>
 
-      <p 
-        data-es="Nos enfocamos en la seguridad y eficiencia de procesos, facilitando la transformación digital."
-        data-en="We focus on security and process efficiency, enabling digital transformation.">
-        Nos enfocamos en la seguridad y eficiencia de procesos, facilitando la transformación digital.
+      <p
+        data-es="Evaluamos infraestructura, procesos y riesgos para facilitar decisiones de seguridad basadas en información objetiva."
+        data-en="We assess infrastructure, processes and risks to support security decisions based on objective information.">
+
+        Evaluamos infraestructura, procesos y riesgos para facilitar decisiones de seguridad basadas en información objetiva.
+
       </p>
+
     </div>
 
-    <div class="nos-card" data-aos="fade-up" data-aos-delay="100">
-      <i data-lucide="eye"></i>
+    <!-- CARD -->
+    <div class="servicio-card">
 
-      <h3 
-        data-es="Nuestra Visión"
-        data-en="Our Vision">
-        Nuestra Visión
+      <div class="servicio-icon">
+        <i data-lucide="monitor"></i>
+      </div>
+
+      <h3>
+        Pentesting
       </h3>
 
-      <p 
-        data-es="Priorizamos riesgos para tomar decisiones inteligentes basadas en contexto real."
-        data-en="We prioritize risks to make smart decisions based on real context.">
-        Priorizamos riesgos para tomar decisiones inteligentes basadas en contexto real.
+      <p
+        data-es="Realizamos pruebas de penetración manuales y automatizadas para identificar vulnerabilidades antes de que puedan ser explotadas."
+        data-en="We perform manual and automated penetration tests to identify vulnerabilities before they can be exploited.">
+
+        Realizamos pruebas de penetración manuales y automatizadas para identificar vulnerabilidades antes de que puedan ser explotadas.
+
       </p>
+
     </div>
 
-    <div class="nos-card" data-aos="fade-up" data-aos-delay="200">
-      <i data-lucide="briefcase"></i>
+    <!-- CARD -->
+    <div class="servicio-card">
 
-      <h3 
-        data-es="Nuestro Portafolio"
-        data-en="Our Portfolio">
-        Nuestro Portafolio
+      <div class="servicio-icon">
+        <i data-lucide="cpu"></i>
+      </div>
+
+      <h3
+        data-es="Ethical Hacking"
+        data-en="Ethical Hacking">
+        Ethical Hacking
       </h3>
 
-      <p 
-        data-es="Consultoría, diseño de soluciones y servicios gestionados en ciberseguridad."
-        data-en="Consulting, solution design, and managed cybersecurity services.">
-        Consultoría, diseño de soluciones y servicios gestionados en ciberseguridad.
+      <p
+        data-es="Simulamos ataques avanzados controlados para evaluar la resiliencia de su organización frente a amenazas reales."
+        data-en="We simulate controlled advanced attacks to evaluate your organization's resilience against real-world threats.">
+
+        Simulamos ataques avanzados controlados para evaluar la resiliencia de su organización frente a amenazas reales.
+
       </p>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="servicio-card">
+
+      <div class="servicio-icon">
+        <i data-lucide="clipboard-check"></i>
+      </div>
+
+      <h3
+        data-es="Validación Final"
+        data-en="Security Validation">
+        Validación Final
+      </h3>
+
+      <p
+        data-es="Verificamos la efectividad de las remediaciones implementadas y validamos el cierre de vulnerabilidades críticas."
+        data-en="We verify the effectiveness of implemented remediations and validate the closure of critical vulnerabilities.">
+
+        Verificamos la efectividad de las remediaciones implementadas y validamos el cierre de vulnerabilidades críticas.
+
+      </p>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- CYBERFOCUS -->
-<section id="cyberfocus" class="features">
 
-  <h2 data-aos="fade-up">CyberFocus</h2>
+<!-- AUSTRALIS -->
+<section id="Australis" class="features">
 
-  <p class="sub" data-aos="fade-up"
-     data-es="Plataforma de Priorización de Amenazas que transforma el caos de vulnerabilidades en un plan de acción claro."
-     data-en="Threat Prioritization Platform that transforms vulnerability chaos into a clear action plan.">
-     Plataforma de Priorización de Amenazas que transforma el caos de vulnerabilidades en un plan de acción claro.
-  </p>
+  <h2 data-aos="fade-up">Australis</h2>
 
+ <p
+  class="sub"
+  data-es="Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables."
+  data-en="Risk exposure and prioritization platform that transforms scattered information into clear and actionable security decisions.">
+
+  Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables.
+
+</p>
+
+  <!-- BLOQUE SUPERIOR -->
+  <div class="australis-layout">
+
+    <!-- IZQUIERDA -->
+    <div class="australis-left">
+
+
+      <img
+        src="img/australis-logo.png"
+        alt="Australis"
+        class="australis-logo"
+      >
+
+    </div>
+
+    <!-- DERECHA -->
+    <div class="australis-right">
+
+      <p
+        data-es="AUSTRALIS se presenta como una plataforma de exposición y priorización de riesgos que permite a las organizaciones centralizar la visibilidad de sus activos, vulnerabilidades y superficies de ataque en un único entorno."
+        data-en="AUSTRALIS is a risk exposure and prioritization platform that enables organizations to centralize visibility of their assets, vulnerabilities, and attack surfaces within a single environment.">
+
+        AUSTRALIS se presenta como una plataforma de exposición y priorización de riesgos que permite a las organizaciones centralizar la visibilidad de sus activos, vulnerabilidades y superficies de ataque en un único entorno.
+
+      </p>
+
+      <p
+        data-es="La solución permite segmentar información por áreas, filiales o unidades de negocio, administrar usuarios y permisos, adaptar la priorización al contexto operativo y generar reportes ejecutivos y técnicos."
+        data-en="The solution allows organizations to segment information by business units or subsidiaries, manage users and permissions, adapt prioritization to operational context, and generate executive and technical reports.">
+
+        La solución permite segmentar información por áreas, filiales o unidades de negocio, administrar usuarios y permisos, adaptar la priorización al contexto operativo y generar reportes ejecutivos y técnicos.
+
+      </p>
+
+      <p
+        data-es="Desde la perspectiva del cliente, AUSTRALIS no se limita a mostrar hallazgos. Proporciona una experiencia estructurada para comprender, gestionar y comunicar el riesgo de forma eficiente."
+        data-en="From the client's perspective, AUSTRALIS goes beyond displaying findings. It provides a structured experience to understand, manage, and communicate risk efficiently.">
+
+        Desde la perspectiva del cliente, AUSTRALIS no se limita a mostrar hallazgos. Proporciona una experiencia estructurada para comprender, gestionar y comunicar el riesgo de forma eficiente.
+
+      </p>
+
+      <p
+        data-es="Integra múltiples fuentes de información, incluyendo escáneres de vulnerabilidades, SIEM, inteligencia de amenazas, OSINT y fuentes especializadas, para transformar datos dispersos en planes de acción claros y accionables."
+        data-en="It integrates multiple information sources, including vulnerability scanners, SIEM platforms, threat intelligence feeds, OSINT, and specialized sources, transforming scattered data into clear and actionable remediation plans.">
+
+        Integra múltiples fuentes de información, incluyendo escáneres de vulnerabilidades, SIEM, inteligencia de amenazas, OSINT y fuentes especializadas, para transformar datos dispersos en planes de acción claros y accionables.
+
+      </p>
+
+      <p
+        data-es="El resultado no es solo un informe, sino:"
+        data-en="The result is more than just a report:">
+        El resultado no es solo un informe, sino:
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- CARDS -->
   <div class="features-grid">
 
     <!-- CARD 1 -->
     <div class="feature-card">
       <div class="feature-header">
-        <i data-lucide="clipboard-check"></i>
-        <h3 
-          data-es="Priorización Inteligente"
-          data-en="Smart Prioritization">
-          Priorización Inteligente
+        <h3
+          data-es="Identificación de vectores de ataque reales"
+          data-en="Identification of Real Attack Paths">
+          Identificación de vectores de ataque reales
         </h3>
+        <i class="toggle-icon" data-lucide="chevron-down"></i>
       </div>
 
-      <p class="feature-desc"
-         data-es="Listados accionables priorizados por riesgo real."
-         data-en="Actionable lists prioritized by real risk.">
-         Listados accionables priorizados por riesgo real.
+      <p
+        class="feature-desc"
+        data-es="Detectamos vulnerabilidades críticas explotables en entornos reales."
+        data-en="We identify critical vulnerabilities exploitable in real-world environments.">
+        Detectamos vulnerabilidades críticas explotables en entornos reales.
       </p>
 
       <div class="feature-extra">
         <p
-          data-es="Analizamos miles de vulnerabilidades automáticamente para identificar las más críticas."
-          data-en="We analyze thousands of vulnerabilities automatically to identify the most critical ones.">
-          Analizamos miles de vulnerabilidades automáticamente
-          para identificar las más críticas.
+          data-es="Analizamos infraestructura, servicios expuestos y configuraciones inseguras para identificar caminos reales de ataque utilizados por adversarios avanzados."
+          data-en="We analyze infrastructure, exposed services, and insecure configurations to identify real attack paths used by advanced adversaries.">
+          Analizamos infraestructura, servicios expuestos y configuraciones inseguras para identificar caminos reales de ataque utilizados por adversarios avanzados.
         </p>
       </div>
     </div>
@@ -172,25 +430,26 @@
     <!-- CARD 2 -->
     <div class="feature-card">
       <div class="feature-header">
-        <i data-lucide="shield"></i>
         <h3
-          data-es="Riesgo Contextualizado"
-          data-en="Contextual Risk">
-          Riesgo Contextualizado
+          data-es="Priorización de riesgos según impacto en su operación"
+          data-en="Risk Prioritization Based on Business Impact">
+          Priorización de riesgos según impacto en su operación
         </h3>
+        <i class="toggle-icon" data-lucide="chevron-down"></i>
       </div>
 
-      <p class="feature-desc"
-         data-es="Evaluación real considerando tu infraestructura."
-         data-en="Real assessment considering your infrastructure.">
-         Evaluación real considerando tu infraestructura.
+      <p
+        class="feature-desc"
+        data-es="Clasificación inteligente basada en riesgo operativo real."
+        data-en="Intelligent classification based on real operational risk.">
+        Clasificación inteligente basada en riesgo operativo real.
       </p>
 
       <div class="feature-extra">
         <p
-          data-es="Integramos controles existentes para reducir falsos positivos."
-          data-en="We integrate existing controls to reduce false positives.">
-          Integramos controles existentes para reducir falsos positivos.
+          data-es="Correlacionamos vulnerabilidades, activos críticos y exposición pública para priorizar los riesgos que realmente afectan la continuidad de su negocio."
+          data-en="We correlate vulnerabilities, critical assets, and public exposure to prioritize the risks that truly impact business continuity.">
+          Correlacionamos vulnerabilidades, activos críticos y exposición pública para priorizar los riesgos que realmente afectan la continuidad de su negocio.
         </p>
       </div>
     </div>
@@ -198,25 +457,26 @@
     <!-- CARD 3 -->
     <div class="feature-card">
       <div class="feature-header">
-        <i data-lucide="file-text"></i>
         <h3
-          data-es="Cumplimiento"
-          data-en="Compliance">
-          Cumplimiento
+          data-es="Plan concreto de mitigación"
+          data-en="Actionable Mitigation Plan">
+          Plan concreto de mitigación
         </h3>
+        <i class="toggle-icon" data-lucide="chevron-down"></i>
       </div>
 
-      <p class="feature-desc"
-         data-es="Preparado para auditorías."
-         data-en="Ready for audits.">
-         Preparado para auditorías.
+      <p
+        class="feature-desc"
+        data-es="Acciones claras y ejecutables para reducir exposición."
+        data-en="Clear and actionable steps to reduce exposure.">
+        Acciones claras y ejecutables para reducir exposición.
       </p>
 
       <div class="feature-extra">
         <p
-          data-es="Generación automática de reportes alineados a estándares."
-          data-en="Automatic report generation aligned with standards.">
-          Generación automática de reportes alineados a estándares.
+          data-es="Generamos planes de remediación prácticos y priorizados, permitiendo corregir vulnerabilidades críticas con foco en impacto, urgencia y viabilidad técnica."
+          data-en="We generate practical and prioritized remediation plans, enabling critical vulnerabilities to be addressed based on impact, urgency, and technical feasibility.">
+          Generamos planes de remediación prácticos y priorizados, permitiendo corregir vulnerabilidades críticas con foco en impacto, urgencia y viabilidad técnica.
         </p>
       </div>
     </div>
@@ -224,31 +484,47 @@
     <!-- CARD 4 -->
     <div class="feature-card">
       <div class="feature-header">
-        <i data-lucide="trending-up"></i>
         <h3
-          data-es="Optimización"
-          data-en="Optimization">
-          Optimización
+          data-es="Optimización del esfuerzo del equipo de seguridad"
+          data-en="Security Team Efficiency Optimization">
+          Optimización del esfuerzo del equipo de seguridad
         </h3>
+        <i class="toggle-icon" data-lucide="chevron-down"></i>
       </div>
 
-      <p class="feature-desc"
-         data-es="Mejora la eficiencia del equipo."
-         data-en="Improve team efficiency.">
-         Mejora la eficiencia del equipo.
+      <p
+        class="feature-desc"
+        data-es="Menos ruido operativo y mayor eficiencia del equipo."
+        data-en="Less operational noise and greater team efficiency.">
+        Menos ruido operativo y mayor eficiencia del equipo.
       </p>
 
       <div class="feature-extra">
         <p
-          data-es="Automatizamos tareas repetitivas para mayor productividad."
-          data-en="We automate repetitive tasks for greater productivity.">
-          Automatizamos tareas repetitivas para mayor productividad.
+          data-es="Automatizamos análisis y priorización para reducir tareas manuales, permitiendo que los equipos de seguridad enfoquen recursos en amenazas realmente críticas."
+          data-en="We automate analysis and prioritization to reduce manual work, allowing security teams to focus resources on truly critical threats.">
+          Automatizamos análisis y priorización para reducir tareas manuales, permitiendo que los equipos de seguridad enfoquen recursos en amenazas realmente críticas.
         </p>
       </div>
     </div>
-
   </div>
+
+  <div class="btn-center btn-demo">
+    <button
+      class="btn"
+      data-es="¿Quieres una demo?"
+      data-en="Request a Demo"
+      onclick="document.getElementById('contacto').scrollIntoView()">
+      ¿Quieres una demo?
+    </button>
+  </div>
+
 </section>
+
+
+
+
+
 
 <!-- CONTACTO -->
 <section id="contacto" class="contacto">
@@ -259,6 +535,7 @@
     data-en="Contact">
     Contacto
   </h2>
+  <br> <br>
 
   <form class="form-pro">
 
@@ -294,7 +571,7 @@
   <div class="footer-container">
 
     <div class="footer-brand">
-      <h2>AURORA</h2>
+      <h2>AURORASYS</h2>
       <p data-es="Líderes en ciberseguridad" data-en="Leaders in cybersecurity">
         Líderes en ciberseguridad
       </p>
@@ -310,9 +587,9 @@
 
   <div class="footer-bottom">
     <p 
-      data-es="© 2026 AURORA. Todos los derechos reservados."
-      data-en="© 2026 AURORA. All rights reserved.">
-      © 2026 AURORA. Todos los derechos reservados.
+      data-es="© 2026 AURORASYS. Todos los derechos reservados."
+      data-en="© 2026 AURORASYS. All rights reserved.">
+      © 2026 AURORASYS. Todos los derechos reservados.
     </p>
   </div>
 </footer>
