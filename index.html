@@ -9,7 +9,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/estilos.css">
-
+   <!-- titulos  -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -65,7 +69,10 @@
       class="hero-logo"
       alt="Aurorasys Logo">
 
-    <h1>AURORASYS</h1>
+    <h1 class="hero-dynamic-title">
+    <span id="typed-text">AURORASYS</span>
+    <span class="cursor">|</span>
+    </h1>
 
     <h2
       data-es="Protección Digital de Nueva Generación"
@@ -665,18 +672,32 @@
 
 
 <!-- AUSTRALIS -->
+<!-- AUSTRALIS -->
 <section id="Australis" class="features">
 
-  <h2 data-aos="fade-up">Australis</h2>
+  <span class="servicios-tag"
+        data-es="PLATAFORMA AUSTRALIS"
+        data-en="AUSTRALIS PLATFORM">
+    PLATAFORMA AUSTRALIS
+  </span>
 
- <p
-  class="sub"
-  data-es="Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables."
-  data-en="Risk exposure and prioritization platform that transforms scattered information into clear and actionable security decisions.">
+  <h2
+    data-es="Australis"
+    data-en="Australis"
+    data-aos="fade-up">
+    Australis
+  </h2>
 
-  Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables.
+  <div class="servicios-line"></div>
 
-</p>
+  <p
+    class="sub"
+    data-es="Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables."
+    data-en="Risk exposure and prioritization platform that transforms scattered information into clear and actionable security decisions.">
+
+    Plataforma de exposición y priorización de riesgos que transforma información dispersa en decisiones de seguridad claras y accionables.
+
+  </p>
 
   <!-- BLOQUE SUPERIOR -->
   <div class="australis-layout">
@@ -684,12 +705,10 @@
     <!-- IZQUIERDA -->
     <div class="australis-left">
 
-
       <img
         src="img/australis-logo.png"
         alt="Australis"
-        class="australis-logo"
-      >
+        class="australis-logo">
 
     </div>
 
@@ -762,14 +781,6 @@
        alt="Dashboard"
       onclick="openLightbox(this.src)">
 </div>
-
-  <div class="gallery-item">
-    <img src="img/dashboard4.jpg" alt="Vulnerability Management">
-  </div>
-
-  <div class="gallery-item">
-    <img src="img/dashboard5.jpg" alt="Executive Reports">
-  </div>
 
 </div>
 
@@ -1195,5 +1206,106 @@ function closeLightbox(){
 
 </script>
 
+<script>
+
+let words = [
+  "AURORASYS",
+  "PREVENCIÓN",
+  "DETECCIÓN",
+  "RESPUESTA"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typedText =
+document.getElementById("typed-text");
+
+function updateWords(){
+
+  if(currentLang === "en"){
+
+    words = [
+      "AURORASYS",
+      "PREVENTION",
+      "DETECTION",
+      "RESPONSE"
+    ];
+
+  }else{
+
+    words = [
+      "AURORASYS",
+      "PREVENCIÓN",
+      "DETECCIÓN",
+      "RESPUESTA"
+    ];
+
+  }
+
+}
+
+function typeEffect(){
+
+  updateWords();
+
+  const currentWord =
+  words[wordIndex];
+
+  if(!deleting){
+
+    typedText.textContent =
+    currentWord.substring(0, charIndex + 1);
+
+    charIndex++;
+
+    if(charIndex >= currentWord.length){
+
+      deleting = true;
+
+      setTimeout(typeEffect, 1800);
+
+      return;
+    }
+
+  }else{
+
+    typedText.textContent =
+    currentWord.substring(0, charIndex - 1);
+
+    charIndex--;
+
+    if(charIndex <= 0){
+
+      deleting = false;
+
+      wordIndex++;
+
+      if(wordIndex >= words.length){
+        wordIndex = 0;
+      }
+
+    }
+
+  }
+
+  setTimeout(
+    typeEffect,
+    deleting ? 60 : 120
+  );
+}
+
+typeEffect();
+
+document.getElementById("lang-toggle").addEventListener("click", () => {
+
+  wordIndex = 0;
+  charIndex = 0;
+  deleting = false;
+
+});
+
+</script>
 </body>
 </html>
