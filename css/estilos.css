@@ -204,53 +204,72 @@ body > * {
   text-align:center;
 }
 
-/* CONTENIDO */
-.nosotros-content{
-  max-width:900px;
-  margin:60px auto 0;
+/* GRID */
+.nosotros-grid{
+  max-width:1200px;
+  margin:70px auto 0;
 
-  display:flex;
-  flex-direction:column;
-  gap:32px;
-
-  text-align:left;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-/* PÁRRAFOS */
-.nosotros-content p{
-  color:#cbd5e1;
+/* CARD */
+.nosotros-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10,18,40,0.95),
+      rgba(15,35,65,0.92)
+    );
 
-  font-size:1.15rem;
-  line-height:1.9;
+  border:1px solid rgba(59,130,246,0.18);
 
-  background:rgba(15,23,42,0.45);
+  border-radius:22px;
 
-  padding:28px 32px;
+  padding:35px;
 
-  border-radius:20px;
+  text-align:left;
 
-  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter:blur(15px);
 
-  backdrop-filter:blur(12px);
+  transition:.35s ease;
 
   box-shadow:
-    0 10px 40px rgba(0,0,0,0.35);
+    0 15px 40px rgba(0,0,0,.35);
+}
+
+.nosotros-card:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(56,189,248,.4);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.45),
+    0 0 25px rgba(56,189,248,.12);
+}
+
+.nosotros-card h3{
+  font-size:1.5rem;
+  margin-bottom:18px;
+  color:white;
+  font-family:'Sora', sans-serif;
+}
+
+.nosotros-card p{
+  color:#94a3b8;
+  line-height:1.8;
+  font-size:1rem;
 }
 
 /* RESPONSIVE */
-@media (max-width:768px){
+@media(max-width:900px){
 
-  .nosotros h2{
-    font-size:2.7rem;
-  }
-
-  .nosotros-content p{
-    font-size:1rem;
-    padding:24px;
+  .nosotros-grid{
+    grid-template-columns:1fr;
   }
 
 }
-
 
   
 .hero h2 {
@@ -875,6 +894,31 @@ textarea {
   transition: all 0.35s ease;
 }
 
+.feature-card::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:3px;
+
+  background:linear-gradient(
+    90deg,
+    #06b6d4,
+    #3b82f6
+  );
+
+  opacity:0;
+  transition:.35s;
+}
+
+.feature-card:hover::before,
+.feature-card.active::before{
+  opacity:1;
+}
+
 /* BORDE GLOW */
 .feature-card::after {
   content: "";
@@ -900,6 +944,20 @@ textarea {
   transition: 0.4s;
 }
 
+
+.toggle-icon{
+  width:22px !important;
+  height:22px !important;
+
+  color:#38bdf8;
+
+  transition:.35s ease;
+}
+
+.feature-card.active .toggle-icon{
+  transform:rotate(180deg);
+}
+
 /* ICONO */
 .feature-header i {
   color: #06b6d4;
@@ -910,7 +968,34 @@ textarea {
 
 /* TITULO */
 .feature-header h3 {
-  font-size: 1.2rem;
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.3;
+  color:white;
+  color:#38bdf8;
+
+  transition:.3s;
+}
+
+.live-dot{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#22d3ee;
+
+  box-shadow:
+    0 0 10px #22d3ee,
+    0 0 20px #22d3ee;
+}
+
+.feature-card.active .live-dot{
+  background:#22c55e;
+
+  box-shadow:
+    0 0 8px #22c55e,
+    0 0 18px #22c55e;
 }
 
 /* TEXTO */
@@ -1128,6 +1213,420 @@ textarea {
   color:#94a3b8;
   line-height:1.8;
   margin:0;
+
+}
+
+
+
+.gallery-title{
+  text-align:center;
+
+  font-size:1.8rem;
+
+  margin-top:60px;
+  margin-bottom:25px;
+
+  color:#fff;
+}
+
+/* =========================
+   AUSTRALIS GALLERY
+========================= */
+
+.australis-gallery{
+
+  display:grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr;
+
+  grid-template-rows:
+    220px 220px;
+
+  gap:20px;
+
+  max-width:1200px;
+
+  margin:70px auto;
+}
+
+/* ITEM */
+
+.gallery-item{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  background:#0f172a;
+
+  cursor:pointer;
+
+  transition:.4s ease;
+}
+
+/* IMAGEN */
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+
+  border-radius:12px;
+}
+
+/* CARD GRANDE */
+
+.gallery-item.large{
+  grid-row:span 2;
+}
+
+/* OVERLAY */
+
+.gallery-item::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.55),
+    transparent
+  );
+
+  opacity:.8;
+
+  transition:.3s;
+}
+
+/* HOVER */
+
+.gallery-item:hover{
+
+  transform:
+    translateY(-6px)
+    scale(1.02);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.5),
+    0 0 25px rgba(6,182,212,.15);
+}
+
+.gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+.gallery-item:hover::after{
+  opacity:.4;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .australis-gallery{
+
+    grid-template-columns:1fr;
+
+    grid-template-rows:auto;
+  }
+
+  .gallery-item.large{
+    grid-row:auto;
+  }
+
+  .gallery-item{
+    height:240px;
+  }
+}
+
+.lightbox{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.92);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+.lightbox.active{
+  display:flex;
+}
+
+.lightbox img{
+
+  max-width:90%;
+  max-height:90%;
+
+  border-radius:16px;
+
+  box-shadow:
+    0 0 40px rgba(0,0,0,.8);
+}
+
+.lightbox-close{
+
+  position:absolute;
+
+  top:30px;
+  right:40px;
+
+  color:white;
+
+  font-size:50px;
+
+  cursor:pointer;
+}
+
+/* ==========================
+   OFFENSIVE SERVICES
+========================== */
+
+.offensive-services{
+  padding:120px 8%;
+  text-align:center;
+
+  background:
+  radial-gradient(
+    circle at top center,
+    rgba(124, 58, 58, 0.08),
+    transparent 45%
+  );
+}
+
+.gallery-title{
+  text-align:center;
+
+  font-size:1.8rem;
+
+  margin-top:60px;
+  margin-bottom:25px;
+
+  color:#fff;
+}
+.gallery-item::after{
+  pointer-events:none;
+}
+
+.offensive-sub{
+  max-width:800px;
+  margin:20px auto 60px;
+
+  color:#94a3b8;
+  line-height:1.8;
+}
+
+.offensive-services h2{
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+
+.offensive-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+/* CARD */
+
+.offensive-card{
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(15,23,42,.9),
+    rgba(2,6,23,.95)
+  );
+
+  border:1px solid rgba(239,68,68,.15);
+
+  border-radius:18px;
+
+  padding:30px;
+
+  text-align:left;
+
+  transition:.35s ease;
+}
+
+/* Glow rojo interno */
+
+.offensive-card::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:18px;
+
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(239,68,68,.08),
+    transparent 55%
+  );
+
+  pointer-events:none;
+}
+
+/* línea superior */
+
+.offensive-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    #ef4444,
+    transparent
+  );
+
+  opacity:0;
+
+  transition:.35s;
+}
+
+/* badge */
+
+.offensive-badge{
+  display:inline-block;
+
+  margin-bottom:16px;
+
+  padding:5px 10px;
+
+  border-radius:999px;
+
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.8px;
+
+  color:#fca5a5;
+
+  border:1px solid rgba(239,68,68,.25);
+
+  background:rgba(239,68,68,.10);
+}
+
+/* iconos */
+
+.offensive-card svg{
+  width:24px;
+  height:24px;
+
+  color:#ef4444;
+
+  margin-bottom:18px;
+}
+
+/* titulo */
+
+.offensive-card h3{
+  color:white;
+
+  font-size:1.15rem;
+  font-weight:600;
+
+  margin-bottom:12px;
+}
+
+.offensive-card h3::after{
+  content:"";
+
+  display:block;
+
+  width:40px;
+  height:2px;
+
+  margin-top:10px;
+
+  background:#ef4444;
+}
+
+/* texto */
+
+.offensive-card p{
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+/* hover */
+
+.offensive-card:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(239,68,68,.45);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.7),
+    0 0 25px rgba(239,68,68,.18);
+}
+
+.offensive-card:hover::before{
+  opacity:1;
+}
+
+.ofensivo-tag{
+  color:#ff5a5a;
+
+  background:linear-gradient(
+    90deg,
+    rgba(255,0,0,.12),
+    rgba(255,80,80,.08)
+  );
+
+  border:1px solid rgba(255,80,80,.35);
+
+  box-shadow:
+    0 0 25px rgba(255,0,0,.18),
+    inset 0 0 15px rgba(255,0,0,.08);
+
+  letter-spacing:1px;
+}
+
+/* responsive */
+
+@media(max-width:1000px){
+
+  .offensive-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:700px){
+
+  .offensive-grid{
+    grid-template-columns:1fr;
+  }
 
 }
 
